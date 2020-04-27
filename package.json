@@ -20,5 +20,9 @@
         "node-sass": "^4.5.3",
         "npm-run-all": "^4.1.1",
         "postcss-cli": "^4.1.1"
+    },
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/logicb0mb/logicb0mb.github.io"
     }
 }
