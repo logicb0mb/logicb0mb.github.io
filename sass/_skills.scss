@@ -1,4 +1,64 @@
 .skills {
-    background-color: $color-grey-light-2;
     grid-column: center-start / center-end;
+
+    margin: 15rem 0;
+
+    display: grid;
+    // grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(auto-fit, minmax(26rem, 1fr));
+    grid-gap: 6rem;
+    align-items: start;
+}
+
+.skill {
+    display: grid;
+    grid-template-columns: min-content 1fr;
+    grid-row-gap: 1.5rem;
+    grid-column-gap: 2.5rem;
+
+    &__icon {
+        fill: $color-primary;
+        width: 5rem;
+        height: 5rem;
+        grid-row: 1 / span 2;
+        transform: translateY(-1rem);
+    }
+}
+.list {
+    list-style: none;
+    margin: 1rem 0;
+    padding: 1rem 0;
+
+    display: flex;
+    flex-wrap: wrap;
+
+    &__item {
+        flex: 0 0 50%;
+        margin-bottom: 0.7rem;
+        font-size: 1.7rem;
+    }
+
+    &__item::before {
+        content: '';
+        display: inline-block;
+        height: 1.2rem;
+        width: 1.2rem;
+        margin-right: 0.7rem;
+
+        //for older browsers
+        background-image: url(./../img/chevron-thin-right.svg);
+        background-size: cover;
+
+        // for modern browsers -masks
+        @supports (-webkit-mask-image: url()) or (mask-image: url()) {
+            background-color: $color-primary;
+            -webkit-mask-image: url(./../img/chevron-thin-right.svg);
+            -webkit-mask-size: cover;
+            -moz-mask-image: url(./../img/chevron-thin-right.svg);
+            -moz-mask-size: cover;
+            mask-image: url(./../img/chevron-thin-right.svg);
+            mask-size: cover;
+            background-image: none;
+        }
+    }
 }

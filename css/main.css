@@ -31,9 +31,21 @@ body {
       grid-template-columns: [sidebar-start] 15rem [sidebar-end full-start] minmax(6rem, 1fr) [center-start] repeat(8, [col-start] minmax(min-content, 14rem) [col-end]) [center-end] minmax(6rem, 1fr) [full-end];
 }
 
-.container > * {
-  padding: 40px;
-  font-size: 3rem;
+.heading-1, .heading-2, .heading-3, .heading-4 {
+  font-family: "Josefin Sans", sans-serif;
+  font-weight: 400;
+}
+
+.heading-4 {
+  font-size: 1.9rem;
+}
+
+.heading-4--light {
+  color: #f9f7f6;
+}
+
+.heading-4--dark {
+  color: #54483a;
 }
 
 .sidebar {
@@ -53,8 +65,79 @@ body {
 }
 
 .skills {
-  background-color: #aaa;
   grid-column: center-start / center-end;
+  margin: 15rem 0;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (minmax(26rem, 1fr))[auto-fit];
+      grid-template-columns: repeat(auto-fit, minmax(26rem, 1fr));
+  grid-gap: 6rem;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: start;
+}
+
+.skill {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: min-content 1fr;
+      grid-template-columns: -webkit-min-content 1fr;
+      grid-template-columns: min-content 1fr;
+  grid-row-gap: 1.5rem;
+  grid-column-gap: 2.5rem;
+}
+
+.skill__icon {
+  fill: #c69963;
+  width: 5rem;
+  height: 5rem;
+  -ms-grid-row: 1;
+  -ms-grid-row-span: 2;
+  grid-row: 1 / span 2;
+  -webkit-transform: translateY(-1rem);
+          transform: translateY(-1rem);
+}
+
+.list {
+  list-style: none;
+  margin: 1rem 0;
+  padding: 1rem 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.list__item {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 50%;
+          flex: 0 0 50%;
+  margin-bottom: 0.7rem;
+  font-size: 1.7rem;
+}
+
+.list__item::before {
+  content: '';
+  display: inline-block;
+  height: 1.2rem;
+  width: 1.2rem;
+  margin-right: 0.7rem;
+  background-image: url(./../img/chevron-thin-right.svg);
+  background-size: cover;
+}
+
+@supports ((-webkit-mask-image: url()) or (mask-image: url())) {
+  .list__item::before {
+    background-color: #c69963;
+    -webkit-mask-image: url(./../img/chevron-thin-right.svg);
+    -webkit-mask-size: cover;
+    -moz-mask-image: url(./../img/chevron-thin-right.svg);
+    -moz-mask-size: cover;
+    mask-image: url(./../img/chevron-thin-right.svg);
+    mask-size: cover;
+    background-image: none;
+  }
 }
 
 .story__pictures {
