@@ -26,14 +26,48 @@ body {
   -ms-grid-rows: 90vh min-content 40vw (min-content)[3];
       grid-template-rows: 90vh -webkit-min-content 40vw repeat(3, -webkit-min-content);
       grid-template-rows: 90vh min-content 40vw repeat(3, min-content);
-  -ms-grid-columns: [sidebar-start] 8rem [sidebar-end full-start] minmax(6rem, 1fr) [center-start] ([col-start] minmax(min-content, 14rem) [col-end])[8] [center-end] minmax(6rem, 1fr) [full-end];
-      grid-template-columns: [sidebar-start] 8rem [sidebar-end full-start] minmax(6rem, 1fr) [center-start] repeat(8, [col-start] minmax(-webkit-min-content, 14rem) [col-end]) [center-end] minmax(6rem, 1fr) [full-end];
-      grid-template-columns: [sidebar-start] 8rem [sidebar-end full-start] minmax(6rem, 1fr) [center-start] repeat(8, [col-start] minmax(min-content, 14rem) [col-end]) [center-end] minmax(6rem, 1fr) [full-end];
+  -ms-grid-columns: [full-start] minmax(6rem, 1fr) [center-start] ([col-start] minmax(min-content, 14rem) [col-end])[8] [center-end] minmax(6rem, 1fr) [full-end];
+      grid-template-columns: [full-start] minmax(6rem, 1fr) [center-start] repeat(8, [col-start] minmax(-webkit-min-content, 14rem) [col-end]) [center-end] minmax(6rem, 1fr) [full-end];
+      grid-template-columns: [full-start] minmax(6rem, 1fr) [center-start] repeat(8, [col-start] minmax(min-content, 14rem) [col-end]) [center-end] minmax(6rem, 1fr) [full-end];
+}
+
+canvas {
+  display: block;
+  position: fixed;
+  z-index: -1;
+}
+
+#particle-js {
+  height: 100%;
+  width: 100%;
 }
 
 .heading-1, .heading-2, .heading-3, .heading-4 {
   font-family: "Josefin Sans", sans-serif;
   font-weight: 400;
+}
+
+.heading-secondary {
+  text-align: center;
+  font-size: 3.5rem;
+  text-transform: uppercase;
+  font-family: "Josefin Sans", sans-serif;
+  font-weight: 700;
+  display: block;
+  background-image: -webkit-gradient(linear, left top, right top, from(#c69963), to(#b28451));
+  background-image: linear-gradient(to right, #c69963, #b28451);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  letter-spacing: 0.2rem;
+  -webkit-transition: all 0.2s;
+  transition: all 0.2s;
+}
+
+.heading-secondary:hover {
+  -webkit-transform: skewY(2deg) skewX(15deg) scale(1.1);
+          transform: skewY(2deg) skewX(15deg) scale(1.1);
+  text-shadow: 0.5rem 1rem 2rem rgba(0, 0, 0, 0.2);
 }
 
 .heading-2 {
@@ -125,7 +159,7 @@ body {
 
 .skills {
   grid-column: center-start / center-end;
-  margin: 15rem 0;
+  margin: 12rem 0;
   display: -ms-grid;
   display: grid;
   -ms-grid-columns: (minmax(26rem, 1fr))[auto-fit];
@@ -137,6 +171,7 @@ body {
 }
 
 .skill {
+  background-color: #fff;
   display: -ms-grid;
   display: grid;
   -ms-grid-columns: min-content 1fr;
