@@ -53,8 +53,9 @@ body {
 // PARTICLE JS
 
 canvas {
-    display: block;
+    display: inline-block;
     position: fixed;
+    vertical-align: bottom;
     z-index: -1;
 }
 

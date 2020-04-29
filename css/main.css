@@ -32,8 +32,9 @@ body {
 }
 
 canvas {
-  display: block;
+  display: inline-block;
   position: fixed;
+  vertical-align: bottom;
   z-index: -1;
 }
 
@@ -48,6 +49,7 @@ canvas {
 }
 
 .heading-secondary {
+  grid-column: 1/-1;
   text-align: center;
   font-size: 3.5rem;
   text-transform: uppercase;
@@ -360,7 +362,6 @@ canvas {
 
 .project__img {
   width: 100%;
-  height: 100%;
   -ms-grid-row: 1;
   -ms-grid-row-span: 1;
   grid-row: 1/2;
@@ -387,8 +388,8 @@ canvas {
   background-color: #101d2c;
   color: #fff;
   font-weight: 400;
-  -webkit-transform: translateY(50%);
-          transform: translateY(50%);
+  -webkit-transform: translateY(10%);
+          transform: translateY(10%);
 }
 
 .project__tech {
@@ -454,6 +455,7 @@ canvas {
       grid-template-rows: repeat(7, 5vw);
   grid-gap: 1.5rem;
   padding: 1.5rem;
+  margin-top: 2rem;
 }
 
 .gallery__item--1 {
