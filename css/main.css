@@ -10,6 +10,7 @@
 html {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
+  scroll-behavior: smooth;
   font-size: 62.5%;
 }
 
@@ -23,9 +24,9 @@ body {
 .container {
   display: -ms-grid;
   display: grid;
-  -ms-grid-rows: 90vh min-content 40vw (min-content)[3];
-      grid-template-rows: 90vh -webkit-min-content 40vw repeat(3, -webkit-min-content);
-      grid-template-rows: 90vh min-content 40vw repeat(3, min-content);
+  -ms-grid-rows: 85vh min-content 40vw (min-content)[3];
+      grid-template-rows: 85vh -webkit-min-content 40vw repeat(3, -webkit-min-content);
+      grid-template-rows: 85vh min-content 40vw repeat(3, min-content);
   -ms-grid-columns: [full-start] minmax(6rem, 1fr) [center-start] ([col-start] minmax(min-content, 14rem) [col-end])[8] [center-end] minmax(6rem, 1fr) [full-end];
       grid-template-columns: [full-start] minmax(6rem, 1fr) [center-start] repeat(8, [col-start] minmax(-webkit-min-content, 14rem) [col-end]) [center-end] minmax(6rem, 1fr) [full-end];
       grid-template-columns: [full-start] minmax(6rem, 1fr) [center-start] repeat(8, [col-start] minmax(min-content, 14rem) [col-end]) [center-end] minmax(6rem, 1fr) [full-end];
@@ -67,6 +68,12 @@ canvas {
 .heading-1, .heading-2, .heading-3, .heading-4 {
   font-family: "Josefin Sans", sans-serif;
   font-weight: 400;
+}
+
+.heading-1 {
+  font-size: 4.5rem;
+  color: #f9f7f6;
+  line-height: 1;
 }
 
 .heading-secondary {
@@ -173,6 +180,39 @@ canvas {
 .header {
   background-color: #54483a;
   grid-column: full-start / col-end 6;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(16, 29, 44, 0.83)), to(rgba(16, 29, 44, 0.83))), url(../img/back.jpg);
+  background-image: linear-gradient(rgba(16, 29, 44, 0.83), rgba(16, 29, 44, 0.83)), url(../img/back.jpg);
+  background-size: cover;
+  padding: 8rem;
+  padding-top: 4rem;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-rows: 1fr min-content 6rem 1fr;
+      grid-template-rows: 1fr -webkit-min-content 6rem 1fr;
+      grid-template-rows: 1fr min-content 6rem 1fr;
+  -ms-grid-columns: max-content;
+      grid-template-columns: -webkit-max-content;
+      grid-template-columns: max-content;
+  grid-row-gap: 1.5rem;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.header__btn {
+  -ms-flex-item-align: start;
+      -ms-grid-row-align: start;
+      align-self: start;
+  -ms-grid-column-align: start;
+      justify-self: start;
+}
+
+.header__logo {
+  height: 3rem;
+}
+
+.header__know-more--logos img {
+  height: 2.5rem;
 }
 
 .contacts {
@@ -317,6 +357,10 @@ canvas {
   margin-bottom: 3rem;
 }
 
+.story__text .emoji {
+  font-style: normal;
+}
+
 .story__jsmeme {
   width: 30rem;
   height: 19rem;
@@ -362,7 +406,7 @@ canvas {
   display: grid;
   -ms-grid-columns: (1fr)[2];
       grid-template-columns: repeat(2, 1fr);
-  grid-row-gap: 3.5rem;
+  grid-row-gap: 1rem;
 }
 
 .project__side--back {
@@ -409,8 +453,8 @@ canvas {
   background-color: #101d2c;
   color: #fff;
   font-weight: 400;
-  -webkit-transform: translateY(10%);
-          transform: translateY(10%);
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
 }
 
 .project__tech {
@@ -425,7 +469,7 @@ canvas {
 }
 
 .project__tech--top {
-  margin-top: 2.5rem;
+  margin-top: 0.1rem;
 }
 
 .project__tech svg {
@@ -437,6 +481,7 @@ canvas {
 
 .project__btn {
   grid-column: 1/-1;
+  padding: 0 3rem;
 }
 
 .project__cta {
