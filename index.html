@@ -10,7 +10,7 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.js"></script>
 
-
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
     <link href="https://fonts.googleapis.com/css?family=Josefin+Sans:300,400,400i,700|Nunito:300,300i" rel="stylesheet">
     <link rel="stylesheet" href="css/main.css">
     <link rel="shortcut icon" type="image/png" href="img/favicon.png">
@@ -70,7 +70,7 @@
         </div>
 
 
-        <section class="skills">
+        <section data-aos="fade-up" class="skills">
             <h2 class="heading-secondary">SKILLS</h2>
             <div class="skill">
                 <svg class="skill__icon">
@@ -507,7 +507,7 @@
         </section>
 
         <h2 class="heading-secondary">Certificates</h2>
-        <section class="gallery">
+        <section data-aos="fade-up" class="gallery">
             <figure class="gallery__item gallery__item--1">
                 <img src="img/webdesign.jpg" alt="Gallery image 1" class="gallery__img">
             </figure>
@@ -570,6 +570,10 @@
     </div>
 
     <script src="./app.js"></script>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
 
 </body>
 

@@ -10,7 +10,6 @@
 html {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
-  scroll-behavior: smooth;
   font-size: 62.5%;
 }
 
@@ -63,6 +62,27 @@ canvas {
   height: 100%;
   z-index: 9999;
   background: url(../assets/Preloader.gif) center no-repeat #fff;
+}
+
+/* Scroll bar CSS */
+/* width */
+::-webkit-scrollbar {
+  width: 15px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  display: hidden;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #c69963;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #101d2c;
 }
 
 .heading-1, .heading-2, .heading-3, .heading-4 {
