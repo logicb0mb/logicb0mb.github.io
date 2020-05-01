@@ -9,27 +9,19 @@
     background-size: cover;
     padding: 8rem;
     padding-top: 4rem;
-
     display: grid;
-    grid-template-rows: 1fr min-content 6rem 1fr;
+    grid-template-rows: 1fr min-content 6rem 2fr;
     grid-template-columns: max-content;
-    grid-row-gap: 1.5rem;
-    justify-content: space-between;
+    grid-row-gap: 2rem;
+    justify-content: center;
 
     &__btn {
+        margin-top: 4rem;
         align-self: start;
         justify-self: start;
     }
 
     &__logo {
         height: 3rem;
-    }
-    &__know-more-text {
-    }
-
-    &__know-more--logos {
-        img {
-            height: 2.5rem;
-        }
     }
 }

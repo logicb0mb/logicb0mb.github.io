@@ -1,4 +1,37 @@
 .contacts {
     background-color: $color-secondary;
     grid-column: col-start 7 / full-end;
+    padding: 3rem;
+
+    display: grid;
+    align-content: center;
+    justify-content: center;
+    grid-row-gap: 2rem;
+    justify-items: center;
+
+    &__list {
+        display: grid;
+        grid-template-columns: min-content max-content;
+        grid-column-gap: 3rem;
+        grid-row-gap: 5vh;
+        align-items: center;
+    }
+
+    &__icon {
+        height: 7rem;
+        width: 7rem;
+        display: block;
+        fill: $color-primary-dark;
+    }
+
+    &__details {
+    }
+
+    &__textlinks {
+        a {
+            text-decoration: none;
+            color: $color-grey-light-2;
+            margin-top: -3px;
+        }
+    }
 }

@@ -71,7 +71,7 @@ canvas {
 }
 
 .heading-1 {
-  font-size: 4.5rem;
+  font-size: 6.5rem;
   color: #f9f7f6;
   line-height: 1;
 }
@@ -79,10 +79,10 @@ canvas {
 .heading-secondary {
   grid-column: 1/-1;
   text-align: center;
-  font-size: 3.5rem;
+  font-size: 4.5rem;
   text-transform: uppercase;
   font-family: "Josefin Sans", sans-serif;
-  font-weight: 700;
+  font-weight: 400;
   display: block;
   background-image: -webkit-gradient(linear, left top, right top, from(#c69963), to(#b28451));
   background-image: linear-gradient(to right, #c69963, #b28451);
@@ -106,6 +106,10 @@ canvas {
   line-height: 1;
 }
 
+.heading-2 .emoji {
+  font-style: normal;
+}
+
 .heading-2--light {
   color: #f9f7f6;
 }
@@ -115,9 +119,8 @@ canvas {
 }
 
 .heading-3 {
-  font-size: 1.6rem;
+  font-size: 3rem;
   color: #c69963;
-  text-transform: uppercase;
 }
 
 .heading-4 {
@@ -187,19 +190,20 @@ canvas {
   padding-top: 4rem;
   display: -ms-grid;
   display: grid;
-  -ms-grid-rows: 1fr min-content 6rem 1fr;
-      grid-template-rows: 1fr -webkit-min-content 6rem 1fr;
-      grid-template-rows: 1fr min-content 6rem 1fr;
+  -ms-grid-rows: 1fr min-content 6rem 2fr;
+      grid-template-rows: 1fr -webkit-min-content 6rem 2fr;
+      grid-template-rows: 1fr min-content 6rem 2fr;
   -ms-grid-columns: max-content;
       grid-template-columns: -webkit-max-content;
       grid-template-columns: max-content;
-  grid-row-gap: 1.5rem;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  grid-row-gap: 2rem;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
 .header__btn {
+  margin-top: 4rem;
   -ms-flex-item-align: start;
       -ms-grid-row-align: start;
       align-self: start;
@@ -211,13 +215,45 @@ canvas {
   height: 3rem;
 }
 
-.header__know-more--logos img {
-  height: 2.5rem;
-}
-
 .contacts {
   background-color: #101d2c;
   grid-column: col-start 7 / full-end;
+  padding: 3rem;
+  display: -ms-grid;
+  display: grid;
+  -ms-flex-line-pack: center;
+      align-content: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  grid-row-gap: 2rem;
+  justify-items: center;
+}
+
+.contacts__list {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: min-content max-content;
+      grid-template-columns: -webkit-min-content -webkit-max-content;
+      grid-template-columns: min-content max-content;
+  grid-column-gap: 3rem;
+  grid-row-gap: 5vh;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.contacts__icon {
+  height: 7rem;
+  width: 7rem;
+  display: block;
+  fill: #b28451;
+}
+
+.contacts__textlinks a {
+  text-decoration: none;
+  color: #aaa;
+  margin-top: -3px;
 }
 
 .skills {
