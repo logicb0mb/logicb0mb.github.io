@@ -17,6 +17,13 @@ $font-display: 'Josefin Sans', sans-serif;
 // LINE
 $line: 1px solid $color-grey-light-2;
 
+// Responsive Breakpoints
+$bp-largest: 75em; //1200px
+$bp-larger: 65.625em; //1050px
+$bp-large: 62.5em; //1000px
+$bp-medium: 50em; //800px
+$bp-small: 43.75em; //700px
+
 *,
 *::before,
 *::after {
@@ -28,6 +35,10 @@ $line: 1px solid $color-grey-light-2;
 html {
     box-sizing: border-box;
     font-size: 62.5%; // 10px/16px = 62.5%  => 1rem = 10px
+
+    @media only screen and (max-width: $bp-largest) {
+        font-size: 50%;
+    }
 }
 
 body {
@@ -39,7 +50,7 @@ body {
 
 .container {
     display: grid;
-    grid-template-rows: 85vh min-content 40vw repeat(3, min-content);
+    grid-template-rows: 80vh min-content 40vw repeat(3, min-content);
     grid-template-columns:
         [full-start] minmax(6rem, 1fr)
         [center-start] repeat(
@@ -48,6 +59,16 @@ body {
         )
         [center-end]
         minmax(6rem, 1fr) [full-end];
+
+    @media only screen and (max-width: $bp-larger) {
+        grid-template-rows: calc(100vh) min-content min-content 40vw repeat(
+                3,
+                min-content
+            );
+    }
+    @media only screen and (max-width: $bp-large) {
+        grid-template-rows: calc(100vh) repeat(6, min-content);
+    }
 }
 
 // PARTICLE JS

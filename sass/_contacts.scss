@@ -9,17 +9,28 @@
     grid-row-gap: 2rem;
     justify-items: center;
 
+    @media only screen and (max-width: $bp-larger) {
+        grid-column: 1/-1;
+    }
+
     &__list {
         display: grid;
         grid-template-columns: min-content max-content;
         grid-column-gap: 3rem;
         grid-row-gap: 5vh;
         align-items: center;
+        @media only screen and (max-width: $bp-larger) {
+            grid-template-columns: repeat(3, min-content max-content);
+        }
+
+        @media only screen and (max-width: $bp-small) {
+            grid-template-columns: min-content max-content;
+        }
     }
 
     &__icon {
-        height: 7rem;
-        width: 7rem;
+        height: 6.5rem;
+        width: 6.5rem;
         display: block;
         fill: $color-primary-dark;
     }
@@ -32,6 +43,7 @@
             text-decoration: none;
             color: $color-grey-light-2;
             margin-top: -3px;
+            font-size: 1.7rem;
         }
     }
 }

@@ -11,7 +11,8 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.js"></script>
 
     <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
-    <link href="https://fonts.googleapis.com/css?family=Josefin+Sans:300,400,400i,700|Nunito:300,300i" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Josefin+Sans:300,400,400i,700|Nunito:300,300i|Megrim"
+        rel="stylesheet">
     <link rel="stylesheet" href="css/main.css">
     <link rel="shortcut icon" type="image/png" href="img/favicon.png">
     <!-- Icons made by <a href="https://www.flaticon.com/authors/freepik" title="Freepik">Freepik</a> from <a
@@ -25,24 +26,16 @@
     <div id="particles-js">
     </div>
     <div class="container">
-        <header id="header" class="header">
+        <header data-aos="fade-down" id="header" class="header">
             <img class="header__logo" src="" alt="">
-            <h3 class="heading-3">👋Hi,</h3>
-            <h1 class="heading-1">I am Shreyas Shukla! </h1>
+            <h3 class="heading-3">👋Hi I am, </h3>
+            <h1 class="heading-1"><span class="megrim"> Shreyas Shukla </span> ! </h1>
             <a href="./assets/Resume.pdf"><button class="btn header__btn"> Download Resume </button></a>
-            <!-- <div class="header__know-more-text">
-                Know More about me on:
-            </div>
-            <div class="header__know-more--logos">
-                <img src="./img/github.png" alt="">
-                <img src="./img/linkedin.png" alt="">
-                <img src="./img/instagram.png" alt="">
-                <img src="./img/twitter.png" alt="">
-            </div> -->
+
         </header>
 
-        <div class="contacts">
-            <h3 class="heading-3">Quick Contact</h3>
+        <div data-aos="fade-down" class="contacts">
+            <h3 class="heading-3">Quick Contacts</h3>
             <div class="contacts__list">
                 <svg class="contacts__icon">
                     <use xlink:href="img/spritenew.svg#icon-gmail"></use>
@@ -127,12 +120,12 @@
 
         </section>
 
-        <div class="story__pictures">
+        <div data-aos="zoom-in" class="story__pictures">
             <!-- <img src="img/story-1.jpg" alt="My own photo" class="story__img--1"> -->
             <!-- <img src="img/story-2.jpeg" alt="" class="story__img--2"> -->
         </div>
 
-        <div class="story__content">
+        <div data-aos="zoom-in" class="story__content">
             <h3 class="heading-3 mb-sm">I am a 20 year old self taught,</h3>
             <h2 class="heading-2 heading-2-dark mb-sm"> &ldquo;Full Stack Web <span class="emoji">👩‍💻</span> &rdquo;
             </h2>
@@ -141,20 +134,20 @@
                 Computer
                 Science
                 and Engineering, from VIT University, Vellore. <span class=" emoji">🎓</span> <span class="mb-sm"
-                    style="display: block;">For nerds
-                    like me
-                    here's a
-                    funny
-                    React meme for you:</span>
+                    style="display: block;"> <span class="memetext"> For nerds
+                        like me
+                        here's a
+                        funny
+                        React meme for you: </span> </span>
                 <img class="story__jsmeme" src="./img/jsmeme.jpg" alt="">
             </p>
             <button class="btn"> <a href="https://github.com/logicb0mb"> Checkout my GitHub</a></button>
         </div>
 
 
-        <section id="projects" class="projects">
+        <section data-aos="fade-up" id="projects" class="projects">
             <h2 class="heading-secondary">PROJECTS</h2>
-            <div class="project">
+            <div class="project" data-aos="fade-up">
                 <div class="project__side project__side--front">
                     <img src="img/project-1.jpg" class="project__img" alt="Recorrido">
                     <h5 class="project__name">Recorrido</h5>
@@ -250,7 +243,7 @@
                     </div>
                 </div>
             </div>
-            <div class="project">
+            <div class="project" data-aos="fade-up">
                 <div class="project__side project__side--front">
                     <img src="img/project-2.jpg" class="project__img" alt="Recorrido">
                     <h5 class="project__name">Cores-Paleta</h5>
@@ -340,7 +333,7 @@
                     </div>
                 </div>
             </div>
-            <div class="project">
+            <div class="project" data-aos="fade-up">
                 <div class="project__side project__side--front">
                     <img src="img/project-3.jpg" class="project__img" alt="Recorrido">
                     <h5 class="project__name">Forkify</h5>
@@ -379,7 +372,7 @@
                     </div>
                 </div>
             </div>
-            <div class="project">
+            <div class="project" data-aos="fade-up">
                 <div class="project__side project__side--front">
                     <img src="img/project-4.jpg" class="project__img" alt="Recorrido">
                     <h5 class="project__name">Connect <sup>+</sup> </h5>
@@ -424,7 +417,7 @@
                     </div>
                 </div>
             </div>
-            <div class="project">
+            <div class="project" data-aos="fade-up">
                 <div class="project__side project__side--front">
                     <img src="img/project-5.jpg" class="project__img" alt="Recorrido">
                     <h5 class="project__name">Yahtzee</h5>
@@ -463,7 +456,7 @@
                     </div>
                 </div>
             </div>
-            <div class="project">
+            <div class="project" data-aos="fade-up">
                 <div class="project__side project__side--front">
                     <img src="img/project-6.jpg" class="project__img" alt="Recorrido">
                     <h5 class="project__name">Dad Jokes</h5>
@@ -503,11 +496,10 @@
                 </div>
             </div>
 
-            </>
         </section>
 
-        <h2 class="heading-secondary">Certificates</h2>
-        <section data-aos="fade-up" class="gallery">
+        <h2 data-aos="fade-up-right" class="heading-secondary">Certificates</h2>
+        <section data-aos="fade-up-right" class="gallery">
             <figure class="gallery__item gallery__item--1">
                 <img src="img/webdesign.jpg" alt="Gallery image 1" class="gallery__img">
             </figure>
@@ -553,7 +545,7 @@
 
         </section>
 
-        <section class="footer">
+        <section data-aos="zoom-in" class="footer">
             <ul class="nav">
                 <li class="nav__item"><a href="https://github.com/logicb0mb" class="nav__link">GitHub</a></li>
                 <li class="nav__item"><a href="https://www.linkedin.com/in/shreyasshukla16"

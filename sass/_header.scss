@@ -8,12 +8,19 @@
         url(../img/back.jpg);
     background-size: cover;
     padding: 8rem;
-    padding-top: 4rem;
     display: grid;
-    grid-template-rows: 1fr min-content 6rem 2fr;
-    grid-template-columns: max-content;
+    grid-template-rows: 1fr min-content minmax(6rem, min-content) 6rem 2fr;
+    grid-template-columns: minmax(min-content, max-content);
     grid-row-gap: 2rem;
     justify-content: center;
+
+    @media only screen and (max-width: $bp-larger) {
+        grid-column: 1/-1;
+    }
+
+    @media only screen and (max-width: $bp-small) {
+        padding: 5rem;
+    }
 
     &__btn {
         margin-top: 4rem;

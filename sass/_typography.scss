@@ -9,12 +9,17 @@
     color: $color-grey-light-1;
     line-height: 1;
 }
+.megrim {
+    font-family: 'Megrim', cursive;
+    font-weight: bolder;
+}
 .heading-secondary {
     grid-column: 1/-1;
     text-align: center;
     font-size: 4.5rem;
     text-transform: uppercase;
     font-family: $font-display;
+
     font-weight: 400;
     display: block;
     background-image: linear-gradient(
