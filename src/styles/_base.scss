@@ -1,0 +1,130 @@
+@use 'variables' as *;
+
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
+}
+
+html {
+    box-sizing: border-box;
+    font-size: 62.5%; // 10px/16px = 62.5%  => 1rem = 10px
+
+    @media only screen and (max-width: $bp-largest) {
+        font-size: 50%;
+    }
+}
+
+body {
+    font-family: $font-primary;
+    color: $color-grey-dark-2;
+    background-color: $color-background;
+    font-weight: 300;
+    line-height: 1.6;
+}
+
+.container {
+    display: grid;
+    grid-template-rows: 80vh min-content 40vw repeat(3, min-content);
+    grid-template-columns:
+        [full-start] minmax(6rem, 1fr)
+        [center-start] repeat(
+            8,
+            [col-start] minmax(min-content, 14rem) [col-end]
+        )
+        [center-end]
+        minmax(6rem, 1fr) [full-end];
+
+    @media only screen and (max-width: $bp-larger) {
+        grid-template-rows: calc(100vh) min-content min-content 40vw repeat(
+                3,
+                min-content
+            );
+    }
+    @media only screen and (max-width: $bp-large) {
+        grid-template-rows: calc(100vh) repeat(6, min-content);
+    }
+}
+
+// PARTICLE JS
+canvas {
+    display: inline-block;
+    position: fixed;
+    vertical-align: bottom;
+    z-index: 0;
+    pointer-events: none;
+}
+
+.container {
+    position: relative;
+    z-index: 1;
+}
+
+// PRELOADER (the original faded it out with jQuery's fadeOut('slow') = 600ms)
+.se-pre-con {
+    position: fixed;
+    left: 0px;
+    top: 0px;
+    width: 100%;
+    height: 100%;
+    z-index: 9999;
+    background-color: $color-background;
+    opacity: 1;
+    transition: opacity 0.6s ease;
+
+    &::before {
+        content: '';
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        width: 4.8rem;
+        height: 4.8rem;
+        border: 0.5rem solid rgba($color-grey-light-1, 0.25);
+        border-top-color: $color-primary;
+        border-right-color: $color-grey-light-1;
+        border-radius: 50%;
+        animation: preloader-spin 0.8s linear infinite;
+        transform: translate(-50%, -50%);
+    }
+
+    &--hide {
+        opacity: 0;
+        pointer-events: none;
+    }
+}
+
+@keyframes preloader-spin {
+    to {
+        transform: translate(-50%, -50%) rotate(360deg);
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .se-pre-con::before {
+        animation: none;
+    }
+}
+
+/* Scroll bar CSS */
+
+/* width */
+::-webkit-scrollbar {
+    width: 15px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+    display: hidden;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: $color-primary;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+    background: $color-secondary;
+}
