@@ -6,7 +6,9 @@ export default function ProjectCard({ name, sup, image, github, tech }) {
     <div className="project" data-aos="fade-up">
       <div className="project__side project__side--front">
         <img src={image} className="project__img" alt={name} />
-        <h5 className="project__name">
+        <h5
+          className={`project__name${name.length > 30 ? ' project__name--long' : ''}`}
+        >
           {name}
           {sup && (
             <>
