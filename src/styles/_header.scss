@@ -1,0 +1,36 @@
+@use 'variables' as *;
+
+.header {
+    background-color: $color-grey-dark-1;
+    grid-column: full-start / col-end 6;
+    background-image: linear-gradient(
+            rgba($color-background, 0.83),
+            rgba($color-background, 0.83)
+        ),
+        url(../assets/img/back.jpg);
+    background-size: cover;
+    padding: 8rem;
+    display: grid;
+    grid-template-rows: 1fr min-content minmax(6rem, min-content) 6rem 2fr;
+    grid-template-columns: minmax(min-content, max-content);
+    grid-row-gap: 2rem;
+    justify-content: center;
+
+    @media only screen and (max-width: $bp-larger) {
+        grid-column: 1/-1;
+    }
+
+    @media only screen and (max-width: $bp-small) {
+        padding: 5rem;
+    }
+
+    &__btn {
+        margin-top: 4rem;
+        align-self: start;
+        justify-self: start;
+    }
+
+    &__logo {
+        height: 3rem;
+    }
+}

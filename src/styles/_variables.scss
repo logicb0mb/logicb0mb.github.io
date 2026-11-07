@@ -1,0 +1,29 @@
+// COLOR VARIABLES
+$color-primary: #B08858;
+$color-primary-light: #D8B17C;
+$color-primary-dark: #46615A;
+
+$color-secondary: #22332D;
+$color-background: #070804;
+$color-surface: #46615A;
+$color-contacts-background: #1B2924;
+
+$color-grey-light-1: #F8DAA6;
+$color-grey-light-2: #B8C2BC;
+
+$color-grey-dark-1: #22332D;
+$color-grey-dark-2: #F8DAA6;
+
+// FONT VARIABLES
+$font-primary: 'Nunito', sans-serif;
+$font-display: 'Josefin Sans', sans-serif;
+
+// LINE
+$line: 1px solid $color-grey-light-2;
+
+// Responsive Breakpoints
+$bp-largest: 75em; //1200px
+$bp-larger: 65.625em; //1050px
+$bp-large: 62.5em; //1000px
+$bp-medium: 50em; //800px
+$bp-small: 43.75em; //700px
